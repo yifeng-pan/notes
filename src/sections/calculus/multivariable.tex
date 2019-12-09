@@ -1,0 +1,28 @@
+Let $f : \R^n \to \R^m$.
+The \textbf{Jacobian Matrix} is the $m \times n$ matrix $J$,
+where $J_{ij} = \frac{\partial f_i}{\partial x_j}$.
+The \textbf{Jacobian (Determinant)} is the determiant of $J$, denoted as $\abs{J}$.
+
+To integrate $f(x,y)$ over the region $R$.
+Let $x = g(u,v), y = h(u,v)$ be the transformation where the region becomes $S$.
+Then the integral becomes:
+\(
+    \iint_R f(x,y) dA = \iint_S f(g(u,v),h(u,v)) \abs{J} \overline{dA}
+\).
+
+\subsection{Lagrange Multipliers}
+    For finding the Absolute Extrema of a $f(x,y,z)$ given $g(x,y,z) = c, h(x,y,z) = k$ constraints, 
+    solve 
+    \begin{align*}
+        \nabla f(x,y,z) &= \lambda_1 \nabla g(x,y,z) + \lambda_2 \nabla h(x,y,z)\\
+        g(x,y,z) &= c \\
+        h(x,y,z) &= k
+    \end{align*}
+    where the constant $\lambda_1, \lambda_2$ are the \textbf{Lagrange Multipliers}.
+    This should yield $5$ equations with $5$ variables.
+
+    Dimensions for $f$ other than $3$ works similarly.
+    Number of constraints other than $2$ works similarly.
+
+    (Note: using $\nabla f(x,y,z) + \lambda_1 \nabla g(x,y,z) + \lambda_2 \nabla h(x,y,z) = 0$
+    works aswell.)(?)

@@ -1,0 +1,94 @@
+$N(t)$ for $t \geq 0$ is a \textbf{Counting Process (CP)} if
+\begin{enumerate}
+    \item $N(t) \geq 0$.
+    \item $N(t) \in \Z$.
+    \item If $s < t$, then $N(s) \leq N(t)$.
+    \item For $s < t$, $N(t) - N(s)$ equals the number of events that occur in the interval $(s,t]$.
+\end{enumerate}
+
+A CP has \textbf{Independent Increments} if the number of events that occur in disjoint intervals are independent.
+
+A CP has \textbf{Stationary Increments} if the distribution of the number of events that occur in any interval
+depends only on the length of the interval.
+
+Let $\bm{o(h)}$ be any function of $h$ that satisfies the condiction: $\lim_{h \to 0} (o(h) / h) = 0$.
+
+$N(t)$ is a \textbf{Poisson Process (PP)} with rate $\lambda > 0$, If
+\begin{enumerate}
+    \item $N(0) = 0$.
+    \item $N(t)$ has Independent and Stationary increments.
+    \item $P(N(t+s) - N(s) = n) = e^{-\lambda t } (\lambda t)^n n!^{-1}, n \geq 0, n \in\Z$.
+    \item $P(N(h) = 1) = \lambda h + o(h)$.
+    \item $P(N(h) \geq 2) = o(h)$.
+\end{enumerate}
+Where $4\land 5 \liff 3$.
+
+Let $\bm{\set{T_n}}$ be the sequence of \textbf{Interarrival Times} of $N(t)$.
+$P(T_n > t) = e^{-\lambda t}$.
+
+$T_n$ has an Exponential Distribution with a mean of $1/\lambda$ for all $n$.
+
+Let $\bm{S_n}$ be the \textbf{Arrival/Waiting Time} of the $n$th event.
+Where $S_n = \sum_{i=1}^n T_i, n \geq 1$.
+
+$S_n$ has a Gamma Distribution with parameters $n$ and $\lambda$. 
+So $f_{S_n}(t) = \lambda e^{-\lambda t} (\lambda t)^{n-1} (n-1)!^{-1}, t \geq 0$.
+
+$S_n \leq t = N(t) \geq n$.
+The formula for probability density can also be obtained using this fact.
+
+$P(T_1 < s | N(t) = 1) = s/t$.
+
+\subsection*{Two Poisson Processes}
+    Suppose a PP with rate $\lambda$ is split into two types, 
+    $\bm{N_1(t)}$ with probability $p$ or 
+    $\bm{N_2(t)}$ with probability $1-p$.
+    Where $N(t) = N_1(t) + N_2(t)$.
+
+    $N_1(t)$ has a rate of $\lambda p$.
+    $N_2(t)$ has a rate of $\lambda (1-p)$.
+
+    Let $\bm{S_n^1, S_m^2}$ denote the time of the $n$th/$m$th event of $N_1(t)$ and $N_2(t)$ respectively.
+
+    $P(S_1^1 < S_1^2) = \lambda_1 (\lambda_1 + \lambda_2)^{-1}$.
+
+    Each event that occurs is going to be
+    $N_1(t)$ with probability $\lambda_1 (\lambda_1 + \lambda_2)^{-1}$,
+    and
+    $N_2(t)$ with probability $\lambda_2 (\lambda_1 + \lambda_2)^{-1}$.
+    So $P(S_n^1 < S_m^2)$ is based on the Binomial Distribution with $p = \lambda_1 (\lambda_1 + \lambda_2)^{-1}$.
+
+\subsection*{$\bm n$ Poisson Processes}
+    Defined $n$ processes similarly to two processes.
+
+    $\sum_{i=1}^{n} P_i(y) = 1$.
+
+    $\E(N_i(t)) = \lambda \int_0^t P_i(s) ds$.
+
+\subsection*{Non-homogeneous Poisson Process (NHPP)}
+    Every event that occurs has a $p(t)$ chance of being recorded.
+    Let $\bm {N_c(t)}$ be the NHPP, then it has a rate of $\bm{\lambda(t)} = \lambda p(t)$.
+
+    A NHPP with $\lambda(t) = \lambda$ is a regular PP.
+
+    Let $\bm{m(t)}$ be the mean value function $= \E(N_c(t)) = \lambda \int_0^t p(s) ds$.
+
+    The increments of a NHPP are Independent, but not necessarily stationary.
+
+    $\lall s,t, 0 \leq s < t, N(t) - N(s)$ has a Poisson Distribution with mean
+    $m(t) - m(s) = \int_s^t \lambda(x)dx$.
+
+\subsection*{Compound Poisson Process (CPP)}
+    $\bm{X(t)}$ is a CPP if $X(t) = \sum_{i=1}^{N(t)}Y_i$.
+    where $N(i)$ is a PP, and $Y_i, i \geq 1$ is some i.i.d.r.v.'s that are also independent of $N(t)$.
+
+    $\E(X(t)) = \lambda t \E(Y_1)$.
+
+    $\Var(X(t)) = \lambda t \E(Y_1^2)$ (Derived from the Law of Total Variance) (?).
+
+    $M_{X}(s) = \exp(\lambda t (M_Y(s) - 1))$ (Derived from the Law of Total Probability) (?).
+
+    If $Y_i = 1$ then $X(t)$ is a normal PP.
+
+TODO:\\
+$f(y_1,y_2 \hdots y_n) = f(s_1 , s_2 \hdots s_n | n) = n!/t^n$ (lec 15).

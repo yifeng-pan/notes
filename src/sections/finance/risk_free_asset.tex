@@ -1,0 +1,66 @@
+Let $V(s) = \bm{P}$ be the \textbf{Principle} investment at time $s$.
+
+Let $\bm{K(s,t)}$ denote the return on an investment from time $s$ to time $t$,
+where $K(s,t) = \frac{V(t) - V(s)}{V(s)}$.
+
+The \textbf{Growth Factor} is $V(t)/V(s)$, 
+while \textbf{Discount Factor} is the multiplicative inverse.
+
+\subsection{Simple Interest}
+    Let $\bm{r}$ be the annual intrest for exactly $365$ days.
+
+    For \textbf{Simple Intrest}: $V(t) = (1 + (t-s)r) V(s)$, $K(s,t) = (t-s)r$.
+
+\subsection{Periodic Compound Interest}
+    Let $\bm{r}$ be the annual intrest for exactly $365$ days.
+
+    For \textbf{Compound Intrest}: 
+    $V(t) = \left(1 + \frac{r}{m} \right)^{(t - s)m} V(s)$,
+    $K(s,t) = \left(1 + \frac{r}{m} \right)^{(t - s)m} - 1$,
+    where $m$ is the number of intrest payments per annum/year.
+
+    A \textbf{Perpetuity} is a constant infinite sequence of payments made at equal time intervals.\\
+    A \textbf{Annuity} is a constant finite sequence of payments made at equal time intervals.\\
+    A \textbf{Amortised Loan} is a Annuity from the point of view of the borrower.\\
+    Let $\bm{C}$ be the constant.
+
+    Let $\bm{\textbf\PA(r,n)} = \sum_{i=1}^n (1+r)^{-i} 
+    = (\frac{1}{r}) - (\frac{1}{r}\frac{1}{(1+r)^n})= \frac{1 - (1 + r)^{-n}}{r}$,
+    where $\PA(r,n)$ returns the \textbf{Present Value Factor} for an Annuity.
+
+    $C \times \PA(r,n)$ is the present value of an Annuity that produces $n$ annual payments of $C$.
+
+    $\lim_{n\to \infty} C\times \PA(r,n) = \frac{C}{r}$ 
+    is the present value of a Perpetuity that produces annual payments of $C$.
+
+    The above formulas are adjusted accordingly for $m \neq 1$.
+
+\subsection{Continuous Compound Interest}
+    Let $\bm{r}$ be the interest rate for the continuous compounding method.
+
+    The \textbf{Effective Rate} $\bm{r_e} = e^r$. 
+    And $r_e$ is defined similarly for periodic compounding aswell.
+
+    For \textbf{Continuous Compounding}:
+    \(
+        V(t) = e^{(t-s) r} V(s)
+    \).
+
+    Define $\bm{k(s,t)}$ to be the \textbf{Logarithmic Return},
+    where $k(s,t) = \ln(\frac{V(t)}{V(s)}$.
+
+    For $a \leq b \leq c, k(a,c) = k(a,b) + k(b,c)$ (Not true for $K(a,c)$).
+
+\subsection{Coupon Bond}
+    A \textbf{Zero-Coupon Bond} promises one payment for a \textbf{Face Value} $\bm{F}$
+    on a \textbf{Maturity Date} $\bm{T}$.
+
+    $\bm{B(t,T)} F$ denotes the price of the Zero-Coupon Bond at time $t$,
+    where $B(t,T) = e^{-r(T-t)}$ depending on the compounding method.
+
+    A \textbf{Coupon Bond} promises a sequence of payments.
+    The value of a Coupon Bond at time $t$ 
+    can be calculated by the values and times of the payments discounted by a 
+    constant interest rate.
+
+    The values for the payments are of the form $\set{C,C, \hdots, C, C + F}$.

@@ -1,0 +1,79 @@
+A stochastic process is a \textbf{CTMC} $\iff$ 
+When the process enters state $i$,
+\begin{enumerate}
+    \item The amount of time it spends in $i$ before making a transition into a different
+    state is Exponentially Distributed (where mean is $1/\bm{v_i}$).
+    \item The probability of entering state $j$ from $i$ is $P_{ij}$.
+    \item $\lall i, P_{ii} = 0$ and $\sum_j P{ij} = 1$.
+\end{enumerate}
+
+\textbf{Birth and Death Processes (BDP)} are a CTMC with states ($0,1,2,\hdots$) 
+and state $n$ can go to either state $n-1$ or $n+1$. 
+The transition probabilities are such that:\\
+$v_0 = \lambda_0, P_{0,1} = 1$, and for $i > 0$, $v_i = \lambda_i + \mu_i$.
+$P_{i,i+1} = \frac{\lambda_i}{\lambda_i + \mu_i}$,
+$P_{i,i-1} = \frac{\mu_i}{\lambda_i + \mu_i}$
+
+The \textbf{Transition Probability Function (TPF)} $\bm{P_{ij}(t)}$
+for a CTMC is defined as $P_{ij}(t) = P(X(t+s) = j | X(s) = i)$.
+
+The \textbf{Instantaneous Transition Rates} $\bm{v_{ij}}$
+is defined as $v_{ij} = v_i P_{ij} = \lim_{h\to 0}\frac{P_{ij}(h)}{h}$.
+
+$v_i$ is the \textbf{Rate of Transition}, where $v_i = \lim_{h\to 0} \frac{1-P_{ii}(h)}{h}$.
+
+\[
+    v_i = \sum_j v_i P_{ij} = \sum_j v_{ij}
+    \text{ and }
+    P_{ij} = \frac{v_{ij}}{v_i} = \frac{v_{ij}}{\sum_j v_{ij}}
+\]
+
+Defined the matrix $\bm{R}$ such that 
+$\bm{r_{ij}} = \begin{cases}
+    v_{ij} &\text{ for $i \neq j.$} \\
+    -v_{j} &\text{ for $i = j.$}
+\end{cases}$
+So $\lall i, \sum_j r_{ij} = 0$.
+
+\textbf{Kolmogorov’s Backward Equation:}
+\(
+    \bm{P'_{ij}(t) }
+    = \left(\sum_{k\neq i} v_{ik}P_{kj}(t)\right) - v_i P_{ij}(t)
+    = \sum_k r_{ij} P_{kj}(t)
+\)
+
+\textbf{Kolmogorov’s Forward Equation:}
+\(
+    \bm{P'_{ij}(t) }
+    = \left(\sum_{k\neq j} P_{ik}(t)v_{kj}\right) - P_{ij}(t) v_i
+    = \sum_k P_{ik}(t) r_{kj}
+\)
+
+Define the matrices $\bm{P(t), P'(t)}$ using $P_{ij}(t)$ and $P_{ij}'(t)$.\\
+The Kolmogorov equations become $P'(t) = R P(t) = P(t) R$,
+and 
+\[
+    P(t) =
+    \bm{
+        e^{Rt}
+        = \sum_{n=0}^\infty R^n \frac{t^n}{n!}
+        = \lim_{n\to \infty} (I + R \frac{t}{n})^n
+        = \lim_{n\to \infty} (I - R \frac{t}{n})^{-n}
+    }
+\].
+
+If $R$ is a $n \times n$ matrix with $n$ Eigenvectors ($R = VDV^{-1}$),
+then $e^{Rt}$ can be solved using a diagonal matrix ($e^{Rt} = V e^{Dt} V^{-1}$),
+where $e^{Dt}$ has the elements $e^{\lambda_i t}$,
+and $\lambda_i$ is the $i$th Eigenvalue.
+
+The \textbf{Limiting/Stationary Probability} $\bm{P_j = \pi_j} = \lim_{t\to \infty} P_{ij}(t)$
+exists $\iff$
+the CTMC is Ergodic.
+
+\(
+    v_j P_j = \sum_{k\neq j} v_{kj} P_k, 
+    \sum_j P_j = 1
+    \text{ and }
+    \vec{\pi} \times R = \vec{0}
+\)

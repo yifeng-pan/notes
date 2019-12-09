@@ -1,0 +1,54 @@
+Let $x \in \R$ and $S \subseteq \R$.
+
+The \textbf{Neighbourhood (nhd)} of $x$ is the set 
+$\bm{N_\e (x)} = \set{y\in\R : \abs{x-y} < \e} = (x-\e, x+\e)$, for some $\e > 0$.
+
+The \textbf{Deleted Neighbourhood} of $x$ is the set $\bm{N_\e^* (x)} = N_\e (x) \setminus \set{x}$.
+
+An \textbf{Interior Point} of $S$ is an element $x \in S$ such that $N_\e (x) \subseteq S$ for some $\e > 0$.
+
+The set of all Interior points of $S$ is the \textbf{Interior} of $S$, denoted as $\bm{\textbf{\interior} (S)}$.
+
+$x$ is a \textbf{Boundary Point} for $S$ 
+$\iff \lall \e > 0, N_\e (x) \cap S \neq \emptyset \land N_\e(x) \cap (\R \setminus S) \neq \emptyset$.
+
+The set of all Boundary Points of $S$ is the \textbf{Boundary} of $S$, denoted as $\bm{\textbf{\bd} (S)}$.
+
+$x$ is a \textbf{Accumulation (Limit) Point} for $S$
+$\iff \lall \e > 0, N_\e^*(x) \cap S \neq \emptyset$
+$\iff \lall \e > 0, \lis y \in S$ such that $0 < \abs{x-y} < \e$.
+
+The set of all Accumulation Points of $S$ is denoted as $\bm{S'}$.
+
+The \textbf{Closure} of $S$ is the set $\bm{\overline{S}} = S \cup S' = S \cup \bd(S)$.
+
+$x$ is a \textbf{Isolated Point} for $S$ 
+$\iff x \in S\setminus S'$
+$\iff x \in S \land \lis \e > 0$ such that $N_\e^*(x) \cap S = \emptyset$.
+
+$S \subseteq \interior(S) \cup \bd(S)$ and $\interior (S) \cap \bd(S) = \emptyset$.
+
+$S$ is \textbf{Open} $\iff S = \interior (S)$
+$\iff \bd(S) \subseteq \R \setminus S$.
+
+$S$ is \textbf{Closed} $\iff \R \setminus S$ is Open
+$\iff \bd(S) \subseteq S$
+$\iff S = \overline S$.
+
+$S$ is \textbf{Clopen} $\iff$ $S$ is both Open and Closed. 
+The only Clopen sets are $\emptyset$ and $ \R$.
+
+If $S \neq \emptyset$, then $S$ is \textbf{Compact}
+$\iff$ every sequence in $S$ has a Convergent subsequence with it's limit in $S$.
+
+\textbf{Bolzano–Weierstrass Theorem (BW):} \\
+If $S\subseteq \R$ is infinite and bounded, then $S' \neq \emptyset$. \\
+Every bounded sequence has a convergent subsequence.
+
+\textbf{Heine-Borel Theorem:} \\
+$S \neq \emptyset$.
+$S$ is Compact $\iff$ $S$ is Closed and Bounded.
+
+\textbf{Cantor's Intersection Theorem:} \\
+If $K_1 \supseteq K_2 \supseteq K_3 \hdots$ are Compact sets,
+then $\bigintersection_{n=1}^\infty K_n \neq \emptyset$ is Compact.

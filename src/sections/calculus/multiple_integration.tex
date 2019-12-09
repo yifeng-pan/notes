@@ -1,0 +1,37 @@
+\subsection{Double Integral}
+    \textbf{Polar Coordinates:}
+    Let $x = r \cos(\theta), y = r \sin(\theta)$, such that $r^2 = x^2 + y^2$.
+    \[
+        \iint_D f(x,y) dA 
+        = 
+        \int_\alpha^\beta 
+        \int_{h_1(\theta)}^{h_2(\theta)} 
+        f(r \cos(\theta), r \sin(\theta)) r dr d\theta
+    \]
+
+\subsection{Triple Integral}
+    \textbf{Spherical Coordinates:}
+    Let $x = p \sin(\phi) \cos(\theta), y = p \sin(\phi) \sin(\theta), z = p \cos(\phi)$,
+    such that $x^2 + y^2 + z^2 = p^2$.
+    \[
+        \iiint_E f(x,y,z) dV
+        = 
+        \int_\delta^\gamma
+        \int_\alpha^\beta 
+        \int_a^b
+        p^2 \sin(\phi)
+        f(p \sin(\phi) \cos(\theta), p \sin(\phi) \sin(\theta), p \cos(\phi)) 
+        dp d\theta d\phi
+    \]
+
+    \textbf{Cylindrical Coordinates:}
+    Let $x = r \cos(\theta), y = r \sin(\theta), z = z$.
+    \[
+        \iiint_E f(x,y,z) dV
+        =
+        \int_\alpha^\beta
+        \int_{h_1(\theta)}^{h_2(\theta)} 
+        \int_{u_1(r \cos(\theta), r\sin(\theta))}^{u_2(r \cos(\theta), r\sin(\theta))}
+        r f(r \cos(\theta), r \sin(\theta), z)
+        dz dr d\theta
+    \]

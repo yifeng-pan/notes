@@ -1,0 +1,24 @@
+Define Independent, $\E$, $P(A | B)$, etc.
+
+Let $X,Y$ be random variables.
+
+$\bm{\sigma_X^2} = \textbf{\Var}(X) = \E[(X - \mu_X)^2] = \E(X)^2 - \E(X^2)$,\\
+where $\sigma_X^2$ is the \textbf{Variance} of $X$,
+and $\sigma_X$ is the \textbf{Standard Deviation}.
+
+The \textbf{Covariance} of $X$ is $\textbf{\Cov}(X,Y) = \E[(X - \mu_X)(Y - \mu_Y)]$.
+
+\textbf{Pearson Correlation Coefficient} $\bm{\rho_{X,Y}} 
+= \frac{\Cov(X,Y)}{\sigma_{X} \sigma_{Y}}$.
+
+$\lall X, \lall Y, -1 \leq \rho(X,Y) \leq 1$.
+
+Let $\set{X_1, \hdots, X_n}$ be any set of random variables.
+Let $\set{a_1, \hdots, a_n}$ be constants.
+
+$\Var(\sum_{i=1}^n a_i X_i) = \sum_{i=1}^n a_i \Var(x_i) + 2\sum_{i<j} a_ia_j \Cov(X_i,X_j)$.
+
+If $X_i$ and $X_j$ are Independent, then $\Cov(X_i, X_j) = 0$.
+
+\textbf{Law of Total Variance} \\
+$\Var(Y) = \E(\Var(Y|X)) + \Var(\E(Y|X))$.

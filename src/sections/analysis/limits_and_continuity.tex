@@ -1,0 +1,115 @@
+Let $f: D \to \R$ such that $D \subseteq \R$.
+Let $a \in D' \subseteq \R$.
+Let $a_n \in D \setminus \set{a}, a_n \to a$.
+
+\(
+    \bm{\lim_{x\to a^+} f(x) = L} 
+    \iff 
+    \lall \e > 0, \lis \delta > 0,
+    \lall x \in D,
+    0 < x-a < \delta
+    \lif
+    \abs{f(x) - L} < \e
+\)
+
+$\bm{\lim_{x\to a^-} f(x) = L}$ is defined similarly with $a-x$ instead.
+
+\(
+    \bm{\lim_{x\to a} f(x) = L} 
+    \iff 
+    \lim_{x\to a^+} f(x) = \lim_{x\to a^-} f(x) = L
+    \iff
+    \lim_{n\to \infty} f(a_n) = L
+\)
+
+\(
+    \bm{\lim_{x \to a}f(x) = \infty}
+    \iff
+    \lall M > 0, \lis \delta > 0,
+    \lall x \in D,
+    0 < \abs{x-a} < \delta
+    \lif
+    f(x) \geq M
+\)
+
+$\bm{\lim_{x\to a} f(x) = -\infty}$ is defined similarly with $M < 0$ instead.
+
+$\bm{\lim_{x\to a^\pm} f(x) = \pm\infty}$ are defined similarly (all 4 cases).
+
+Let $b,x \in D$.
+Let $S \subseteq D$.
+Let $b_n \in D , b_n \to b$.
+
+$f$ is \textbf{Continuous at} $b$
+\(
+    \iff \lall \e > 0, \lis \delta > 0, 
+    \abs{x-b} < \delta \lif \abs{f(x) - f(b)} < \e
+    \iff
+    \lim_{n\to \infty}f(b_n) = f(b)
+    \iff
+    \lim_{x\to b}f(x) = L = f(b)
+\)
+
+$f$ is \textbf{Discontinuous at} $b$ $\iff$ $f$ is not Continuous at $b$.
+
+$f$ is \textbf{Right (Left) Continuous at} $b$ is defined similarly with
+$x-b$ ($b - x$) instead.
+
+$f$ is \textbf{Continuous on} $S$ $\iff$ $f$ is Continuous $\lall s \in S$.
+
+$f$ is \textbf{Uniformly Continuous (UC) on} $S$ $\iff$
+$\lall \e > 0, \lis \delta > 0, \lall x,y\in S, \abs{x-y} < \delta \lif \abs{f(x) - f(y)} < \e$.
+
+$f$ is \textbf{Continuous} $\iff$ $f$ is Continuous on $D$.
+
+\textbf{(Strictly) Increasing/Decreasing/Monotone} for $f$ is defined similarly to sequences. 
+
+Let $g: S \to \R$, $S \subseteq D \intersection \R$.
+$g$ has a \textbf{Continuous Extension} to $D$ $\iff$
+$\lis \tilde{g} : D \to \R$ such that $\tilde{g}$ is Continuous
+and $\tilde g(x) = g(x), \lall x \in S$.
+Notation is $\eval{\tilde g}{S}{} = g$.
+
+If $f$ is UC and $\set{c_n} \subseteq D$ is Cauchy,
+then $\set{f(c_n)}$ is Cauchy.
+
+If $f$ is Continuous and $D$ is Compact, then $f$ is UC on $D$.
+
+If $f$ is UC, then $f$ has a Continuous Extension $\tilde f : \bar{D} \to \R$.
+
+\textbf{Squeeze Theorem: } \\
+If $f,g,h: D \to \R, a \in D'$,
+and $\lis \e >0$ such that 
+$\lall x \in (a-\e, a+\e), f(x) \leq g(x) \leq h(x)$,
+and $\lim_{x\to a} f(x) = \lim_{x \to a} h(x) = L$, 
+then $\lim_{x\to a}g(x) = L$.
+
+\textbf{Extreme Value Theorem: }\\
+If $f: D \to \R$ is continuous and $D$ is compact,
+then $f(D)$ has a $\min$ and $\max$.
+
+\textbf{Intermediate Value Theorem (IVT): } \\
+Suppose $f: I \to \R$ is continuous and $I$ is an interval.
+If $a,b \in I, a < b, f(a) \neq f(b)$, 
+then $\lis c \in (a,b)$ such that $f(c) = k$,
+where $k$ is any value between $f(a)$ and $f(b)$.
+
+\textbf{Types of Discontinuity:} \\
+\textbf{Removable Discontinuity: }
+$\lim_{x\to a} f(x) = L \neq f(a)$ \\
+\textbf{Jump Discontinuity: }
+$\lim_{x\to a^-} f(x) \neq \lim_{x\to a^+} f(x)$
+and $f(a)$ exists. \\
+\textbf{Essential Discontinuity: } 
+$\lim_{x\to a^-} f(x)$ or 
+$\lim_{x\to a^+} f(x)$ or 
+$\lim_{x\to a} f(x)$ has no limit $L$.\\
+\textbf{Infinite Discontinuity: }
+TODO (LEC OCT 24)
+
+\textbf{Trig Functions:} \\
+$\lall x$: \\
+$\abs{\sin(x)} \leq \abs{x}$, \\
+$cos(x) = 1 - 2\sin^2(\frac{x}{2})$, \\
+$\sin(a+b) = \sin(a)\cos(b) + \sin(b)\cos(a)$. \\ 
+$\cos(\arcsin(x)) = \sqrt{1-x^2}$.

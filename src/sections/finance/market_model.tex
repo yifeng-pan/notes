@@ -1,0 +1,78 @@
+Let time $t \geq 0, t \in \Q$.
+Let $t = n \tau$ where $n \in \Nz$ (Discrete Time).
+
+Let $m \in \N, \lall i\in \N, 1 \leq i \leq m$:
+$\bm{S_i(n)}$ is the price of the $i$th \textbf{Risky Asset} at time $n$,
+with a total of $m$ risky assets. 
+
+$\bm{A(n)}$ is the price of the \textbf{Risk-Free Asset} at time $n$.
+
+Unless stated otherwise, $A(0)$ is used as a reference, with $A(0) = 1$ or $100$.
+
+A \textbf{Portfolio} is a vector $\vec{v}(n) = \vectorvalue{x_1(n), \hdots , x_m(n), y(n)}$
+representing the amount of assets held between time $n - 1$ and time $n$, 
+where $\vec{v}(0)$ is undefined.
+Let the \textbf{Value} of the Portfolio at time $n$ being
+\[
+    \bm{V(n)} = 
+    \begin{cases}
+        y(1)A(0) + \sum_{j=1}^m x_j(1)S_j(0) &\text{for $n = 0$ (Initial Value/Wealth)} \\
+        y(n)A(n) + \sum_{j=1}^m x_j(n)S_j(n) &\text{for $n > 0$}
+    \end{cases}
+\]
+
+\textbf{Rate of Return} TODO**** $K_i = $return of $S_i$ is $\bm{K_F} = \frac{F(1) - F(0)}{F(0)}$.
+
+Six Assumptions: 
+\begin{enumerate}
+    \item $\lall n > 0, S(0), A(0), A(n)$ are known, while $S(n)$ is a random variable (Randomness).
+    \item $\lall n, S(n) > 0 \land A(n) > 0$ (Positivity of Prices).
+    \item $\lall i, \lall n, x_i(n) \in \R,y(n) \in \R$ (Divisibility, Liquidity and Short Selling).
+    \item $\lall n, V(n) \geq 0$ (Solvency).
+    \item $\lall n, S(n)$ can only have a finite number of values (Discrete Unit Prices).
+    \item $\lall n > 0, V(0) = 0 \lif V(n) = 0$ (No-Arbitrage Principle).
+\end{enumerate}
+
+An Investment Strategy is \textbf{Self-Financing}
+$\iff$
+\(
+    \lall n \geq 1,
+    V(n) = y(n + 1)A(n) + \sum_{j=1}^m x_j(n + 1)S_j(n)
+\)
+
+An Investment Strategy is \textbf{Predictable}
+$\iff$
+$\lall n,$ the Portfolio $\vec{v}(n + 1)$
+constructed at time $n$ only depends on previous Portfolios.
+
+An Investment Strategy is \textbf{Admissible}
+$\iff$
+it is Predictable, Self-Financing and Assumption 6 (?).
+
+% % Scrap
+% Let there be $m$ risky assets $x_1 S_1(n), \hdots , x_mS_m(n)$.
+% Let the risk-free asset $A(0) = 1$.
+
+% Let $t \in \set{0,1}$.
+
+% $\bm{(x,y)}$ is a \textbf{Portfolio},
+% where the value of the Portfolio is $\bm{V(t)} = xS(t) + yA(t)$.
+
+% Let $F \in \set{S,A,V}$.
+% \textbf{Rate of Return} is $\bm{K_F} = \frac{F(1) - F(0)}{F(0)}$.
+
+TODO (Fundamental Theorem of Asset Pricing, Page 83)
+(Extended Model with Derivative securities, very simular)
+
+A \textbf{Forward Contract} is an agreement to exchange a Risky Asset
+at a future \textbf{Delivery Date} for a \textbf{Forward Price $\bm{F}$}.\\
+To sell is to take a \textbf{Short Forward Position}.
+To buy is to take a \textbf{Long Forward Position}.
+
+A \textbf{Call Option} is a contract that gives the holder a right/option 
+to purchase a Risky Asset at a furture \textbf{Exercise Time} for a \textbf{Strike/Exercise Price}.
+Let $\bm{C(t)}$ denote the price of the option at time $t$.
+
+The prices for Options and Forward Contracts are determined by the No-Arbitrage Principle.
+
+Options are a derivative asset.

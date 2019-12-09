@@ -1,0 +1,39 @@
+State $j$ is \textbf{Accessible} from state $i \iff P^n_{ij} > 0$ for some $n \geq 0$.
+
+If two states $i$ and $j$ are accessible to each other, 
+then they are \textbf{Communicate}, denoted as $i \llra j$.
+
+A Markov Chain is \textbf{irreducible} $\iff$ there is only one class.
+
+
+Let $\bm{f_i}$ denote thet probability that, starting in state $i$, the process will ever reenter state $i$.
+
+State $i$ is \textbf{Recurrent} if $f_i = 1$, and \textbf{Transient} if $f_i < 1$.
+
+Recurrent and Transient are class properties.
+
+
+State $i$ has a \textbf{Period} of $d \iff n \not\cmod{0}{d} \lif P_{ii}^n = 0$, 
+where $d$ is the largest integer with this property.
+
+A state is \textbf{Aperiodic} $\iff$ it has a peroid of $1$.
+
+Periodicity is a class property.
+
+
+If state $i$ is reccurent, 
+and starting in $i$, the expected time until the process returns to state $i$ is finite,
+then it is \textbf{Positive Reccurent}.
+
+Positive Reccurency is a class property.
+
+A state is \textbf{Ergodic} $\iff$ it is positive recurrent and aperiodic.
+
+
+If a Markov Chain is irreducible and ergodic, then $\lim_{n\to+\infty} P_{ij}^n$ exists
+and is independent of $i$.
+Let $\bm{\pi_j}$ be the \textbf{Erodic/Limiting Probabilities},
+where $\pi_j = \lim_{n\to+\infty} P_{ij}^n$.
+
+TODO: \\
+$S = (I - P_T)^{-1}$ (Lec 10).

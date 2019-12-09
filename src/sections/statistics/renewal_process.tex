@@ -1,0 +1,22 @@
+Let $N(t)$ be a CP.
+Let $X_n$ be the time between any two consecutive events.
+
+If $X_n$ are i.i.d.r.v.'s, then $N(t)$ is a \textbf{Renewal Process}.
+
+$m(t) = \E[N(t)]$ is the \textbf{Renewal/Mean-value Function}.
+
+Let $\bm{F(x)} = P(X_n < x)$.
+
+The PP is an example of a RP with $F(x) = 1 - e^{-\lambda x}, x \geq 0$ and $m(t) = \lambda t$.
+
+$m(t) = F(t) + \int_0^t m(t-x) f(x)dx$ is the \textbf{Renewal Equation}.
+
+
+
+Let $\set{X_n}$ be some sequence of r.v.'s.
+This stochastic process is \textbf{Martingale}
+$\iff \lall n, $
+\begin{enumerate}
+    \item $\E(\abs{X_n}) < \infty$.
+    \item $\E(X_{n+1} | X_u, 0 \leq u \leq n) = X_n$.
+\end{enumerate}

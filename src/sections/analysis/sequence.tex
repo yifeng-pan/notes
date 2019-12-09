@@ -1,0 +1,46 @@
+A \textbf{Sequence} is a function $f : \N \to \R$.
+Notations are $\bm{a_n} = f(n), \bm{\set{a_n}}, \bm{\set{a_n}^\infty_{n=1}}$.
+
+
+A sequence is \textbf{Bounded} $\iff \lis M \in R$ 
+such that $\lall n \in \N, \abs{a_n} \leq M$.\\
+\textbf{Bounded Above/Below} are defined similarly.
+
+A sequence is \textbf{(Strictly) Increasing} if $\lall n \in \N, a_{n+1}\geq a_n (a_{n+1}>a_n)$.
+\textbf{(Strictly) Decreasing} is defined similarly.
+
+A sequence is \textbf{Monotone} if it's either Decreasing or Increasing.
+
+A sequence is \textbf{Convergent} to $L$ 
+$\iff \lall \e \in \R, \e > 0, \lis N \in \N$ 
+such that $\lall n \in \N$, if $n \geq N$ then $\abs{a_n - L} < \e$.
+
+A sequence is \textbf{Divergent} to $\infty$ 
+$\iff \lall M\in \R, M > 0, \lis N \in \N$
+such that $\lall n \in \N$, if $n \geq N$ then $a_n > M$.
+\textbf{Divergent} to $-\infty$ is defined similarly.
+
+A sequence is \textbf{Cauchy} 
+$\iff \lall \e \in \R, \e > 0, \lis N \in \N$ 
+such that $\lall m,n \in \N$, if $m,n \geq N$ then $\abs{a_n - a_m} < \e$.
+
+A sequence is Convergent $\iff$ it's Cauchy.
+
+If a sequence is Convergent, then it is Bounded.
+
+
+\textbf{Monotone Convergence Theorem:} \\ 
+If a sequence is Bounded Above and Increasing, then it converges.\\
+If a sequence is Bounded Below and Decreasing, then it converges.\\
+If a sequence is Bounded and Monotone, then it converges.
+
+Every sequence has a Monotone subsequence.
+
+
+Define $\bm{\textbf\sub(a_n)}$ to be a set containing the limits of all subsequences of $\set{a_n}$.
+
+The \textbf{Limit Superior} of $\set{a_n}$ is $\sup(\sub(a_n)) = \max(\sub(a_n))$, denoted as $\bm{\limsup_{n \to \infty}(a_n)}$.
+
+The \textbf{Limit Inferior} of $\set{a_n}$ is $\inf(\sub(a_n)) = \min(\sub(a_n))$, denoted as $\bm{\liminf_{n \to \infty}(a_n)}$.
+
+Let $\set{q_n}$ be any denumeration of $\Q$, then $\sub(q_n) = \R$.

@@ -1,0 +1,96 @@
+Let $f: D \to \R$, 
+$a \in \interior(D)$,
+$S \subseteq \interior(D) \neq \emptyset$.
+
+$f$ is \textbf{Differentiable (diff.) at} $a$
+$\iff$ The Limit 
+\(
+    f'(a) 
+    = \lim_{x\to a} \frac{f(x) - f(a)}{x-a}
+    = \lim_{h\to 0} \frac{f(a+h) - f(a)}{h}
+\)
+exists. \\
+$f'(a)$ is the \textbf{Derivative} of $f$ at $a$.
+
+$f$ is \textbf{Differentiable (diff.) on} $S$ 
+$\iff$
+$f$ is Differentiable $\lall x \in S$.
+
+The \textbf{Derivative} of $f$ on $S$ is the function
+$\bm{f'}: S \to \R$ or $\bm{f^{(1)}}$.
+
+If $f$ is Differentiable at $a$, then $f$ is Continuous at $a$.
+
+$f$ has a \textbf{Local Maximum at} $c$
+$\iff$
+$\lis \delta > 0$ such that
+$\lall x \in N_\delta(c), f(c) \geq f(x)$.
+
+$f$ has a \textbf{Local Minimum at} $c$
+$\iff$
+$\lis \delta > 0$ such that
+$\lall x \in N_\delta(c), f(c) \leq f(x)$.
+
+\textbf{Rolle's Theorem}\\
+Suppose $f : [a,b] \to \R$ is Continuous on $[a,b]$ and Differentiable on $(a,b)$.\\
+If $f(a) = f(b)$, then $\lis c \in (a,b)$ such that $f'(c) = 0$.
+
+\textbf{Mean Value Theorem}\\
+Suppose $f : [a,b] \to \R$ is Continuous on $[a,b]$ and Differentiable on $(a,b)$.\\
+$\lis c \in (a,b)$ such that $f'(c) = \frac{f(b)-f(a)}{b-a}$.
+
+Let $I$ be an interval and $f: I \to \R$.
+If $\lis M > 0$ such that $\lall x \in I, \abs{f'(x)} \leq M$,
+then $f$ is UC on $I$.
+
+\textbf{Intermediate Value Theorem (IVT) (for Derivatives) } \\
+Let $f$ is Differentiable on $[a,b]$
+and $f'(a) \neq f'(b)$.
+$\lall k$ Strictly between $f'(a)$ and $f'(b)$,
+$\lis c \in (a,b)$
+such that $f'(c) = k$.
+
+\textbf{Inverse Function Theorem (for One Variable)} \\
+Let $f$ be diff. on an open interval $I$
+and $f'$ is non-zero on $I$ ($f'$ is either Strictly positive or Strictly negative).
+\begin{enumerate}
+    \item $f:I \to f(I)$ is invertible.
+    \item $f^{-1}: f(I) \to I$ is diff.
+    \item $(f^{-1})'(f(x)) = \frac{1}{f'(x)}$.
+\end{enumerate} 
+
+\textbf{Cauchy's Mean Value Theorem (Cauchy's MVT)} \\
+Let $f,g: [a,b] \to \R$ be Continuous and diff. on $(a,b)$.
+$\lis c \in (a,b)$ such that $[f(b) - f(a)] g'(c) = [g(b) - g(a)] f'(c)$.
+
+\textbf{\lhopital's Rule} \\
+Let $f,g$ be diff. on an open interval containing $[a,b]$
+and $c \in [a,b]$ with $f(c) = g(c) = 0$.
+If $g'$ is non-zero in some deleted nhd of $c$ and $\lim_{x\to c} \frac{f'(x)}{g'(x)} = L$ exists,
+then $\lim_{x\to c}\frac{f(x)}{g(x)} = L$.
+\\
+Let $f,g$ be diff. on $(a, \infty)$ and 
+$\lim_{x\to\infty} f(x) = \lim_{x\to\infty} g(x) = \infty$.
+If $\lim_{x\to \infty} \frac{f'(x)}{g'(x)} = L$ exists,
+then $\lim_{x\to \infty}\frac{f(x)}{g(x)} = L$.
+
+Let $f$ be $n$ times diff. at $x = x_0$.
+
+The \textbf{$n^{\text{th}}$ degree Taylor Polynomial for $f$ at $x_0$} is
+$T_n(x) = \sum_{k=0}^n \frac{f^{(k)}(x_0) (x-x_0)^{k}}{k!}$.
+
+$f^{(k)}(x_0) = T_n^{(k)}(x_0)$ for $0 \leq k \leq n$. $T_n$ is unique.
+
+\textbf{Taylor's Theorem} \\
+Let $f$ be $n$ times diff. on an open set (?) containing $[a,b]$,
+where $f^{(n)}$ is continuous on $[a,b]$ and diff. on $(a,b)$.
+Let $x_0 \in (a,b)$.
+$\lall x \in (a,b) \setminus \set{x_0},
+\lis c $ between $x$ and $x_0$,
+such that $f(x) = T_n(x) + \frac{f^{(n+1)}(c)}{(n+1)!} (x-x_0)^{n+1}$.
+
+\textbf{Taylor's Inequality} \\
+If $f^{(n+1)}$ is bounded on $(a,b)$ by $M$,
+then $\lall x \in (a,b), \abs{f(x) - T_n(x)}
+\leq \frac{M}{(n+1)!} \abs{x-x_0}^{n+1}
+\leq \frac{M}{(n+1)!} (b-a)^{n+1}$.

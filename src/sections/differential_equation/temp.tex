@@ -1,0 +1,48 @@
+\section{First Order}
+    \textbf{Integrating Factor}: $y' + p(t)y = q(t)$
+        \[
+            y(t) = \frac{\int \mu(t)q(t) dt + c}{\mu(t)}
+            , \text{ where }
+            \mu(t) = e^{\int p(t) dt}
+        \]
+
+    \textbf{Bernoulli}: $y' + p(t)y = q(t)y^n$
+        Substitute with $v = y^{1-n}$, then solve $v(t)$ with a Integrating Factor.
+
+
+\section{Second Order}
+
+    % \textbf{Principle of Superposition:}
+        % If $y_1(t)$ and $y_2(t)$ are two solutions to a linear, homogeneous DE, then so is 
+        % $y(t) = c_1y_1(t) + c_2y_2(t)$.
+
+    We define a $n \times n$ matrix $W$,
+    such that $W_{ij} = f_j^{i-1}(x)$.
+    The \textbf{Wronskian} is the determiant of $W$, denoted as $W(f_1, f_2, \hdots, f_n)$.
+
+    Example: The Wronskian of two functions $f, g$ is $W(f,g) = fg' - gf'$.
+
+    If $y_1(t)$ and $y_2(t)$ are two solutions to
+    \(p(t)y'' + q(t) y' + r(t)y = 0\) and
+    $W(y_1, y_2)(t) \neq 0$,
+    then the two solutions are a \textbf{Fundamental Set of Solutions},
+    where the General solution is $y(t) = c_1y_1(t) + c_2y_2(t)$.
+
+\section{Derived Formulas:}
+    Radioactive decay:
+    $Q(t) = Q(0) 2^{-t/H}$, where $H$ is the half-life.
+
+    Cooling:
+    $T(t) = T_m + (T(0) - T_m)e^{-kt}$, where $k$ is the cooling constant.
+    And $T'(t) = k(T_m - T(t))$.
+
+    Concentration:
+    At time $t$.
+    Let $Q(t) = $ amount of salt. 
+    Let $V(t) = $ volume of solution in the tank.
+    Let $C_i(t), C_o(t)$ be the concentrations of solution flowing into/out the tank.
+    Let $R_i(t), R_o(t)$ be the volumes of solution flowing into/out the tank.
+    Let $C_o = Q/V$.
+    $Q' = C_i R_i - C_o R_o$.
+    Solve with Integrating Factor.
+    

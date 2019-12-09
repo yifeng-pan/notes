@@ -1,0 +1,58 @@
+Let $f$ be a Bounded function on $[a,b]$.
+
+A \textbf{Partition of} $[a,b]$ is 
+$\bm{P} = \set{x_0, x_1 , \hdots , x_n}$ where 
+$a = x_0, b = x_n$ and $\lall k, 0 \leq k < n \lif x_k < x_{k+1}$.
+
+Let $Q,P$ be Partitions of $[a,b]$.
+
+$Q$ is a \textbf{Refinement of} $P$ 
+$\iff P \subseteq Q$.
+
+Defined $\bm{M_i(f,P)} = \sup\set{f(x) | x_{i-1} \leq x \leq x_i}$. \\
+Defined $\bm{m_i(f,P)} = \inf\set{f(x) | x_{i-1} \leq x \leq x_i}$. 
+
+The \textbf{Upper Sum for $f$ on a partition $[a,b]$} is 
+\(
+    \bm{U(f,P)} = \sum_{i=1}^n M_i(f,P) \Delta x_i
+\) where $\Delta x_i = x_i - x_{i-1}$. \\
+The \textbf{Lower Sum for $f$ on a partition $[a,b]$} is 
+\(
+    \bm{L(f,P)} = \sum_{i=1}^n m_i(f,P) \Delta x_i
+\).
+
+The \textbf{Upper Integral for $f$ on $[a,b]$} is
+$U(f) = \inf_P \set{U(f,P)}$. \\
+The \textbf{Lower Integral for $f$ on $[a,b]$} is
+$L(f) = \sup_P \set{L(f,P)}$. 
+
+$f$ is \textbf{(Riemann) Integrable on} $[a,b]$ if 
+\(
+    L(f) = U(f) = \bm{\int_a^b f(x) dx} = \bm{\int_a^b f}
+\).
+
+\(
+    L(f,P) \leq L(f,Q) \leq U(f,Q) \leq U(f,P)
+\).
+
+$f$ is Integrable on $[a,b]$
+$\iff$
+$\lall \e > 0, \lis $ a partition $P$ such that
+$U(f,P) - L(f,P) < \e$.
+
+\textbf{Fundamental Theorem of Calculus}
+\begin{enumerate}
+    \item 
+        Let $f$ be Bounded and Integrable on $[a,b]$.
+        Define $F : [a,b] \to \R$, so that 
+        \(
+            F(x) = \int_a^x f(t) dt
+        \).
+        $F$ is UC on $[a,b]$.
+        If $f$ is Continuous at $c$, then $F$ is diff. at $c$ and $F'(c) = f(c)$.
+    \item 
+        Let $f'$ be Bounded and Integrable on $[a,b]$.
+        \(
+            \int_a^b f' = f(b) - f(a)
+        \).
+\end{enumerate}
