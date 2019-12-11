@@ -1,0 +1,29 @@
+Let $\set{a_n}$ be a sequence.
+
+Define the \textbf{Sequence of Partial Sums} $\bm{\sum a_n} = \bm{s_n} = \sum_{i = 1}^n a_i$.
+
+If $\set{s_n}$ is convergent, then $\set{a_n}$ is convergent to $0$.
+
+\textbf{Cauchy's Convergence Test} \\
+$\set{s_n}$ is convergent
+$\iff$
+$\lall \e > 0, \lis N \in \N$ so that 
+$\lall n,m \in \N, N < m < n \lif \sum_{i=m}^n a_i < \e$.
+
+\textbf{Comparison Test} \\
+Suppose $\lall n, 0 \leq a_n \leq b_n$.\\
+If $\sum b_n$ is convergent, then $\sum a_n$ is convergent.
+
+\textbf{Limit Comparison Test} \\
+Suppose $\lall n, a_n$ and $b_n$ are non-negative.
+Suppose $\lim_{n\to \infty} \frac{a_n}{b_n} = L \in [0,\infty]$.
+\begin{enumerate}
+    \item If $L \in [0, \infty)$ and $\sum b_n$ is convergent,
+        then $\sum a_n$ is convergent.
+    \item If $L \in (0, \infty]$ and $\sum b_n$ is divergent,
+        then $\sum a_n$ is divergent.
+    \item If $L \in (0, \infty)$, 
+        then 
+        ($\sum a_n$ is convergent
+        $\iff$ $\sum b_n$ is convergent).
+\end{enumerate}
