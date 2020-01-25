@@ -1,0 +1,70 @@
+% Let $S$ be a set. Suppose $a,b,c \in S$.
+
+A \textbf{Law of Composition/Binary Operation on} $S$
+% maps any ordered pair of $S$ to some element is $S$. In other words, 
+is a function/map of the form
+$S \times S \to S$. \\
+(Common Notations: $*, \star, \cdot, \dotp, \bullet, \times, +$, or by concatenating the two elements.)
+
+A Law of Composition on $S$ is 
+\(
+    \begin{cases}
+        \textbf{Associative} &\iff \lall a,b,c \in S, (ab)c = a(bc). \\
+        \textbf{Commutative} &\iff \lall a,b \in S, ab = ba.
+    \end{cases}
+\)
+
+The \textbf{Identity/Unity} of a Law of Composition is an element $\bm{e} \in S$,
+such that $\lall a \in S, ea = ae = e$.
+
+A element $a \in S$ is \textbf{Invertible} $\iff \lis b \in S, ab = ba = e$, 
+where $b$ is the inverse of $a$.
+
+A \textbf{Group} is a set $S$ together with a Law of Composition
+denoted by $\bm{G} = (S, *)$, such that
+\begin{enumerate}
+    \item * is Associative.
+    \item $\lis$ an Identity.
+    \item Every element of $S$ is Invertible.
+\end{enumerate}
+
+A \textbf{Abelian Group} is a Group that is Commutative.
+
+The \textbf{Order} of a Group $(S, *)$ is the number of elements in the group,
+where $\bm{\abs{G}} = \abs{(S, *)} = \abs{S}$. \\
+(Notation: $(S, *)$ should not be treated as an ordered set, 
+for instance: $(\R, \times) = \R^\times$, and $(\Z, +) \subseteq (\R, +)$.)
+
+A Group $H$ is a \textbf{Subgroup of} a Group $G$
+$\iff H \subseteq G \land \lall a,b \in H, ab \in H$ (\textbf{Closure}). \\
+(Closure is a part of the definition of a Law of Composition.)
+
+Every Group $G$ has two trivial Subgroups: $G$ and $\set{e}$.
+
+
+% Let $(S, *)$ denote the set $S$ under a binary operation $*$.
+
+% \begin{enumerate}
+%     \item $S$ is closed under a binary operation.
+%     \item The operation is associative.
+%     \item The operation has a identity/unity.
+%     \item Every element of $S$ has an inverse in $S$.
+%     \item The operation is commutative.
+% \end{enumerate}
+
+% $S$ is a \textbf{Monoid} 
+% $\iff$ 1, 2 and 3.
+
+% $S$ is a \textbf{Group}
+% $\iff$ $S$ is a Monoid, 4.
+
+% $S$ is a \textbf{Albelian Group}
+% $\iff$ $S$ is a Group and 5.
+
+% If $S$ is finite, the \textbf{Order} of $S$ is the number of elements in $S$, 
+% denoted by $\abs{S}$.\\
+% (Notation: $\abs{(S, *)}$ means $\abs{S}$ most of the time.)
+
+% % A \textbf{Binary Operation} $\bm{*}$ on a set $\bm{S}$ maps every ordered pair $(a,b)$ 
+% % to some element $c$, where $a,b,c\in S$.
+
