@@ -41,30 +41,16 @@ $\iff H \subseteq G \land \lall a,b \in H, ab \in H$ (\textbf{Closure}). \\
 
 Every Group $G$ has two trivial Subgroups: $G$ and $\set{e}$.
 
+Let $G, G'$ be groups.
 
-% Let $(S, *)$ denote the set $S$ under a binary operation $*$.
+A \textbf{Homomorphism} $\bm{\phi}$ is a function from $G \to G'$,
+such that $\lall a,b \in G, \phi(ab) = \phi(a) \phi(b)$.
 
-% \begin{enumerate}
-%     \item $S$ is closed under a binary operation.
-%     \item The operation is associative.
-%     \item The operation has a identity/unity.
-%     \item Every element of $S$ has an inverse in $S$.
-%     \item The operation is commutative.
-% \end{enumerate}
+The \textbf{Kernel} $\bm{\textbf{\kernel}\phi}$ of a Homomorphism is the set of all elements in $G$
+such that $a \in G, \phi(a) = $ the identity in $G'$.
 
-% $S$ is a \textbf{Monoid} 
-% $\iff$ 1, 2 and 3.
+$H$ is a \textbf{Normal Subgroup} of $G$
+$\iff \lall h \in H, \lall g \in G, ghg^{-1} \in H$. 
 
-% $S$ is a \textbf{Group}
-% $\iff$ $S$ is a Monoid, 4.
-
-% $S$ is a \textbf{Albelian Group}
-% $\iff$ $S$ is a Group and 5.
-
-% If $S$ is finite, the \textbf{Order} of $S$ is the number of elements in $S$, 
-% denoted by $\abs{S}$.\\
-% (Notation: $\abs{(S, *)}$ means $\abs{S}$ most of the time.)
-
-% % A \textbf{Binary Operation} $\bm{*}$ on a set $\bm{S}$ maps every ordered pair $(a,b)$ 
-% % to some element $c$, where $a,b,c\in S$.
-
+The \textbf{Center} of a group $G$ is defined: 
+$\bm{Z} = \set{z \in G | \lall x \in G, zx = xz}$.
