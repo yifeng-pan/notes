@@ -13,3 +13,13 @@ $\iff \lall \e > 0, \lis N = N \in \N, \lall n \geq N, \lall x \in C,
 Denoted as $f_n \xrightarrow[C]{\textrm{c.u.}} f$.
 
 If $\set{f_n}$ Converges Uniformly to $f$, then it Converges Pointwise to $f$.
+
+Suppose $f_n \xrightarrow[C]{\textrm{c.p.}} f$.
+If $\lis \set{u_n}$ such that $\lim_{n \to \infty} u_n = 0$
+and $\lall x \in C, \lall n \in \N, \abs{f_n(x) - f(x)} \leq u_n$,
+then $f_n \xrightarrow[C]{\textrm{c.u.}} f$.
+
+Suppose $\set{f_n}$ is a sequence of functions Integrable on $[a,b]$.
+If $f_n \xrightarrow[C]{\textrm{c.u.}} f$,
+then $f$ is Integrable on $[a,b]$,
+and $\lim_{n\to \infty} \int_a^b f_n(x) dx = \int_a^b \lim_{n\to \infty} f_n(x) dx$.
