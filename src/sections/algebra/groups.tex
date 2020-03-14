@@ -24,7 +24,7 @@ A \textbf{Group} is a set $S$ together with a Law of Composition
 denoted by $\bm{G} = (S, *)$, such that
 \begin{enumerate}
     \item * is Associative.
-    \item $\lis$ an Identity.
+    \item $\lis$ an Identity $\bm{e_G}$.
     \item Every element of $S$ is Invertible.
 \end{enumerate}
 
@@ -85,7 +85,7 @@ A Partition is logically equivalent to an \textbf{Equivalence Relation} on $S$.
 
     Let $\psi:G \to G'$ be a group homorphism.
     $\abs{G:\ker{\psi}} = \abs{\psi(G)}$.
-    
+
 
 \subsection{Quotient Group}
     Let $C$ be the set of left cosets of a Normal subgroup $N$ of $G$.
@@ -112,3 +112,35 @@ A Partition is logically equivalent to an \textbf{Equivalence Relation} on $S$.
     An \textbf{Alternating Group} $\bm{A_n}$ contains all even elements of $S_n$.
 
     The order of $p$ is the smallest positive integer $k$ such that $p^k = 1$.
+
+\subsection{Dihedral Group TODO}
+
+\subsection{Action/Operation}
+    Let $G$ be a group, $X$ be a set.
+
+    A \textbf{Let Group Action (Operation)} is a function 
+    $\bm{\phi}: G\times X \to X, (g,x) \mapsto \phi(g,x) = g \dotp x$
+    such that 
+    \begin{enumerate}
+        \item $\lall s \in S, \phi(e_G, x) = x$.
+        \item $\lall g, h \in G, \lall x \in X, \phi(gh,x) = \phi(g,\phi(h,x))$.
+    \end{enumerate}
+
+    A \textbf{Right Group Action} is defined similarly.
+
+    A \textbf{Orbit} of an element $x \in X$ by the group $G$ 
+    is $G\dotp x = \set{g \dotp x | g \in G}$.
+
+    The set of Orbits of $X$ form a partition of $X$.
+
+    A \textbf{Stabilizer} of $x$ by $G$ is $g\in G | g \dotp x = x$.\\
+    The set of all Stabilizers is the \textbf{Stabilizer (Subgroup)} of $x$ under $G$.
+
+\subsection{Conjugation}
+    A \textbf{Conjugation} is a action of $G$ on itself such that $(g,x) \mapsto gxg^{-1}$.
+
+    The Stabilizer of this action is called the \textbf{Centralizer} denoted by $\bm{Z(x)}$.
+
+    A Orbit of this action is called the \textbf{Conjugacy Class} doneted by $\bm{C(x)}$.
+
+    $\abs{G} = \abs{Z(x)}\abs{C(x)}$.
