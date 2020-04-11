@@ -1,0 +1,23 @@
+Let $A \subseteq \R^n$. 
+Let $f: A \to \R^m$.
+Let $x_0 \in \interior{A}$. 
+Let $x_0' \in A$. (Does it matter? for derivative.)
+Let $v \in \R^n$ be a vector.
+Let $L: \R^n \to \R^m$ be a linear transformation.
+
+$f$ is \textbf{Differentiable at $x_0$ with derivative $L$}
+$\iff$.
+$\lim_{x \to x_0, x \in A \setminus \set{x_0}} 
+\frac{\magnitude{f(x) - f(x_0) - L(x-x_0)}}{\magnitude{x-x_0}} = 0$.
+
+$f$ is \textbf{Differentiable in the direction $v$ at $x_0$}
+$\iff$
+$\lim_{t \to 0^+, x_0 + tv \in A} \frac{f(x_0 + tv) - f(x_0)}{t}$
+exists.
+
+Let $1 \leq i \leq n$.
+Let $e_i$ be a unit vector in the direction of $x_i$.
+
+The \textbf{Partial Derivative of $f$ with respect to $x_i$ at $x_0$}
+is defined as 
+$\partial_{x_i}f(x_0) := \lim_{t \to 0, x_0 + te_i \in E} \frac{f(x_0+te_i) - f(x_0)}{t}$
