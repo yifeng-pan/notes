@@ -1,0 +1,24 @@
+Let $A \subset \R^n$ be bounded.
+Let $f: A \to \R$ be bounded.
+Let $D \subset A$ be the set of all points where $f$ is discontinuous.
+
+If $\bd{A}$ and $D$ both have measure zero, then $f$ is integrable on $A$.
+
+Let $R$ be any compact rectangle that contains $A$. ($R$ exists since $A$ is bounded.)
+
+Extend $f$ to $\bar{f}: R \to \R$, such that
+\[
+    \bar{f}(x) = 
+    \begin{cases}
+        f(x) & \text{ if $x \in A$} \\
+        0 & \text{ if $x \in R \setminus A$}
+    \end{cases}
+\].
+
+Let $\bar{D} \subset D \cup \bd{A}$ be the set of all points where $\bar{f}$ is discontinuous.
+
+By the Riemann-Lebesgue Theorem in $\R^n$:
+$\bar{f}$ is integrable over $R$ $\iff$ $\bar{D}$ hase measure zero.
+
+By the definition of the integral of $f$ over $A$:
+$f$ is integrable over $A$ $\iff$ $\bar{f}$ is integrable over $R$.
