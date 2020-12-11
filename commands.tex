@@ -1,4 +1,4 @@
-% Proofs 
+% Proofs
 \theoremstyle{definition} % no italic
 \newtheorem{lemma}{Lemma}
 \newtheorem{theorem}{Theorem}
@@ -12,11 +12,19 @@
   \end{array}\right]
 }
 
+\newcommand*\equations[1]{\begin{align*}#1\end{align*}}
+
 % Evaluate for calc
 \newcommand*\eval[3]{\left.#1\right\rvert_{#2}^{#3}}
 
+% Partial Derivatives
+\newcommand*\fracpartial[2]{\frac{\partial #1}{\partial #2}}
+
 % Absolute Value
 \newcommand*\abs[1]{\left|#1\right|}
+
+% Multiplicative inverse
+\newcommand*\inverse[1]{#1^{-1}}
 
 % Floor and Ceiling function
 \newcommand*\floor[1]{\left\lfloor #1 \right\rfloor}
@@ -38,7 +46,7 @@
 \let\bigintersection\bigcap
 \let\bigunion\bigcup
 \let\defaultemptyset\emptyset
-\let\emptyset\varnothing % Nice empty sets 
+\let\emptyset\varnothing % Nice empty sets
 
 % Set notations
 \newcommand{\N}{\mathbb{N}} % Natural
@@ -46,11 +54,16 @@
 \newcommand{\Q}{\mathbb{Q}} % Rational
 \newcommand{\R}{\mathbb{R}} % Real
 \newcommand{\C}{\mathbb{C}} % Complex
+\newcommand{\F}{\mathbb{F}} % Field
 \newcommand{\Nz}{\N \union \set{0}} % Natural including 0
+
+% Jacobi Symbol
+\newcommand{\jfrac}[2]{\genfrac{(}{)}{}{}{#1}{#2}}
 
 % Lazy
 \let\e\epsilon
 \newcommand*{\lhopital}{L'H\^opital}
+\newcommand*{\bezout}{B\'ezout}
 
 % Logic
 \newcommand{\llra}{\longleftrightarrow}
@@ -59,17 +72,18 @@
 \newcommand{\cmod}[2]{\equiv #1 \ (\mathrm{mod}\ #2)}
 
 % For metavariables
-%\usepackage[cal=boondoxo]{mathalfa}
+\usepackage[cal=boondoxo]{mathalfa}
 \newcommand{\meta}[1]{\mathcal{#1}}
 
 % Functions
 \newcommand*{\sub}{\textrm{sub}} % limits of all subsequences
 \newcommand*{\interior}{\textrm{int}}
 \newcommand*{\bd}{\textrm{bd}} % Boundary
-\newcommand*{\kernel}{\textrm{ker}} % Kernel
 
 \newcommand*{\curl}{\textrm{curl}} % Surface Integral
-\newcommand*{\divergence}{\textrm{div}} 
+\newcommand*{\divergence}{\textrm{div}}
+
+\newcommand*{\Gal}{\textrm{Gal}}
 
 % Stats
 \newcommand*{\E}{\textrm{E}}
@@ -78,3 +92,6 @@
 
 % Finance
 \newcommand*{\PA}{\textrm{PA}}
+
+
+\newcommand*{\lcm}{\textrm{lcm}}

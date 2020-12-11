@@ -1,0 +1,34 @@
+\documentclass[10pt, letterpaper, titlepage]{report}
+
+\input{../packages.tex}
+\input{../commands.tex}
+\input{../setup.tex}
+
+\usepackage{hyperref} % Doesn't like math in section titles
+% \newcommand{\smath}[2]{\texorpdfstring{#1}{#2}} % Use this to not break hyperref
+% \section[title in bookmark]{title} % also works
+
+\setcounter{secnumdepth}{-1} % Sets sectioning level for numbering
+% -1 part     1 section     3 subsubsection  5 subparagraph
+%  0 chapter  2 subsection  4 paragraph
+
+% % Debug
+% % For \hbox too wide errors.
+% \overfullrule=.01cm
+
+% Header
+\geometry{margin = 1in}
+% \pagestyle{fancy}
+% \lhead{}
+% \rhead{}
+
+% Title page
+\title{Algebra Notes}
+\author{Yifeng Pan}
+\date{}
+
+\begin{document}
+    \maketitle
+
+
+\end{document}
